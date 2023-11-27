@@ -154,6 +154,7 @@ h1{
     color: white;
     margin-bottom: 100px;
     height:700px;
+    min-height: fit-content;
 }
 .h1a{
     margin-top: 50px;
