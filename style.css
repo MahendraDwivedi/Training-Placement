@@ -1,0 +1,300 @@
+/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro:ital,wght@1,300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+#o{
+    font-size:small;
+    padding-left:1rem;
+    font-style: italic;
+    
+    
+}
+.container{
+    background-color: rgb(243, 228, 208);  
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(25deg, rgb(202, 176, 114) 0 30%, rgb(230, 136, 22) 45% 100%);
+    position: fixed;
+    width: 100vw;
+   z-index: 100;
+
+}
+.logo{
+    display: flex;
+    margin-left: 2rem;
+    padding-right: 2px;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+h2{
+    margin-top: 15px;
+    margin-left:30px ;
+}
+a{
+    margin-left: 2em;
+    text-decoration: none;  
+    color: black; 
+}
+.img{
+    background-image:url("college.jpeg") ;
+    width: 100vw;
+    height: 90vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow:visible;
+
+}
+.stu{
+    display: grid;
+   
+    margin-top: 60px;
+}
+.belowmain{
+   margin-top: -320px;
+    background-color:white;
+    opacity:0.7;
+    height: 290px;
+    margin-left: 50px;
+    margin-right: 600px;
+    border-radius: 10px;
+   
+}
+
+.btnall{
+    position:absolute;
+    display: grid;
+    justify-self: flex-end;
+    padding-top:  300px;
+    margin-right: 50px;
+    gap: 30px;
+    
+}
+
+.btns{
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgb(230, 136, 22);
+    font-size: larger;
+    border-color: black;
+    border-width: 5px;
+    border-style:double;
+}
+
+.vision{
+    margin-top: 50px;
+    background-image: linear-gradient(90deg,#d0dbeb,hsla(29, 83%, 49%, 0.76));
+}
+div>p{
+    margin-left: 15px;
+}
+.vision>p{
+    font-size: larger;
+}
+h1{
+    margin-left: 10px;
+}
+.li{
+   margin-left: 15px;
+   line-height: 1.5;
+   font-size: larger;
+}
+
+.placement{
+    background-image: linear-gradient(90deg,#d0dbeb,hsla(29, 83%, 49%, 0.76));
+    margin-top: 20px;
+}
+.placement>h1{
+    margin-left: 10px;
+}
+
+.placement > div{
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.h1{
+    
+    color:black;
+    font-size:xx-large;
+    margin-left: 20px;
+    font-weight:bolder;
+    font-family: 'Fira Sans', sans-serif;
+    word-spacing: 5px;
+   
+}
+.p1{
+    margin-left: 20px;
+    font-size: larger;
+    word-spacing: 2px;
+}
+#why{
+    margin-top: 5rem;
+    background-image: linear-gradient(90deg, rgb(202, 178, 114) 0 30%,hsla(29, 83%, 49%, 0.76));
+    color: white;
+    margin-bottom: 100px;
+    height:700px;
+}
+.h1a{
+    margin-top: 50px;
+    color: aliceblue;
+    font-size: xx-large;
+    margin-left: 550px;
+}
+.h1a:hover{
+    color: rgb(152, 124, 82);
+}
+.btnall button:hover{
+    color: rgb(244, 242, 239);
+}
+.btns:hover{
+    cursor:grab;
+}
+.options a:hover{
+    color: rgb(243, 242, 242);
+    text-decoration: underline;
+}
+
+.p2{
+    margin-top: 20px;
+    font-size: larger;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.cardtop{
+    margin-top: 100px;
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: space-around;    
+}
+.card{
+    border-width: 2px;
+    border-style: solid;
+    padding: 30px;
+    max-width:300px;
+    margin-right: 10px;
+    border-color: black;
+    border-radius: 10px;
+    
+
+    
+}
+
+
+hr{
+    width: 100vw;
+    border: 1px solid black;
+}
+
+
+
+
+/***************************************************** director desk********************************************************* */
+
+#deskmain{
+    background-image: linear-gradient(40deg,#d0dbeb,hsla(29, 95%, 47%, 0.76));
+}
+.deskmain>h1{
+    margin-left: 10px;
+}
+.desk{
+    display: flex;
+    justify-content: space-between;
+}
+
+q{
+    color: white;
+    text-shadow: 1px 1px 2px #000000,0 0 25px blue,0 0 5px rgb(23, 23, 24);
+}
+.vl{
+    border-left: 2px solid black;
+    margin-left: 30px;
+    height: 240px;
+}
+.desk>img{
+    margin-left: 3px;
+    height: 220px;
+    width: 1000px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #1b1a1a;
+    float: left;
+  
+    
+   
+}
+
+.John > p{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+
+
+
+/* **********************************resources****************************** */
+
+
+#reshead{
+    background-image: linear-gradient(40deg,#d0dbeb,hsla(29, 95%, 47%, 0.76));
+}
+
+
+.resources {
+    
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+   
+}
+
+.rescard{
+    scroll-behavior: auto;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: larger;
+    font-weight: 600;
+    border-radius: 14px;
+    box-shadow: 2px 2px 2px 2px #1b1a1a;
+
+}
+
+
+
+
+/* ***********************************footer******************************* */
+
+.attractive-footer {
+    background-color: rgb(255, 115, 0);
+    color: #fff;
+    padding: 10px 0;
+  }
+ 
+ 
