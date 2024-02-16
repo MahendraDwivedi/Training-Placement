@@ -1,5 +1,4 @@
 
-
 body 
 {
   font-family:sans-serif; 
@@ -7,9 +6,7 @@ body
   background-size:c;
   color:rgb(19, 17, 17);
   background-repeat: no-repeat;
-  overflow-y: hidden;
-  overflow-x: hidden;
- 
+  overflow-y: hidden; /* Hide vertical scrollbar */
 }
 
 
@@ -78,9 +75,6 @@ button:hover {
 }
 .mainContainer{
     padding: 16px;
-    
-   
-    
 }
 
 .headingsContainer>button{

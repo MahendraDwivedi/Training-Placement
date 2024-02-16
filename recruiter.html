@@ -35,7 +35,7 @@
     <form action="">
          <!-- Headings for the form -->
         <div class="headingsContainer">
-            <button><i style="color:white;" class="fa-brands fa-linkedin-in"></i> &nbsp;Sign in with LinkedIn</button>
+            <button><i style="color:white;" class="fa-brands fa-linkedin-in"></i> &nbsp;<a href="https://in.linkdin.com">Sign in with LinkedIn</a></button>
             <p>OR</p>
         </div>
 
@@ -61,7 +61,7 @@
             </div>
 
             <!-- Submit button -->
-             <button type="submit">Login</button>
+             <button type="submit" id = "logn" >Login</button>
 
             <!-- Sign up link -->
             <p class="register">Don't have an account?  <a href="#">Register here!</a></p>
@@ -78,5 +78,13 @@
 
         </div>
     </div>
+  <script>
+         
+     document.getElementById('logn').addEventListener('click',function(){
+        window.location.href = 'portal.html';
+     });
+
+  </script>
+    
 </body>
 </html>
