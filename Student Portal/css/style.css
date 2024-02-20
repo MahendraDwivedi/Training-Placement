@@ -1,10 +1,11 @@
 body{
-    margin:0px;
-    padding: 0px;
+   
     font-family: calibri;
 }
 *{
     box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
 }
 
 #cell{
@@ -387,11 +388,14 @@ text-align: center;
 
 color: #FFFFFF;
 }
+
 footer{
     width:100%;
     text-align: center;
-    padding: 0px 5%;
+    padding: 2rem 5%;
     border-top: 1px solid rgba(231, 9, 9, 0.2);
+    background-color: #6eb9f2;
+    padding-bottom: 5rem;
 }
 footer a,
 footer p{
@@ -614,4 +618,5 @@ nav .menu-btn{
     footer{
         padding: 0px 10px;
     }
+    
 }

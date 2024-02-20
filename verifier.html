@@ -57,7 +57,7 @@
             </div>
 
             <!-- Submit button -->
-             <button type="submit">Login</button>
+             <button type="submit"><a href="#">Login</a></button>
 
             <!-- Sign up link -->
             <p class="register">Don't have an account?  <a href="#">Register here!</a></p>
@@ -68,8 +68,104 @@
 
 
     </form>
-
-
+    
+     <script >
+        document.querySelector('button[type="submit"]').addEventListener('click', function (event) {
+            // Prevent the form from submitting and page reload
+            event.preventDefault();
+    
+            // Get the values from the form fields
+            var rollNumber = document.getElementsByName('username')[0].value;
+            var verifierPassword = document.getElementsByName('pswrd')[0].value;
+            var personalPassword = document.getElementsByName('pswrd')[1].value;
+    
+            //  validation logic here
+            if (validateCredentials(rollNumber, verifierPassword, personalPassword)) {
+                // Redirect to .\Student Portal\index.html if validation is successful
+                window.location.href = '.\\Student Portal\\index.html';
+            } else {
+                // Display an error message or handle invalid credentials
+                alert('Invalid Roll Number, verifier password, or personal password. Please try again.');
+            }
+        });
+    
+        // Function to validate Roll Number, verifier password, and personal password
+        function validateCredentials(rollNumber, verifierPassword, personalPassword) {
+            // Hardcoded values for demonstration purposes
+            var validCredentials = [
+                { rollNumber: '2208410100021', verifierPassword: 'Ayush@123', personalPassword: 'Ayush@123' },
+                { rollNumber: '2208410100034', verifierPassword: 'Mahendra@123', personalPassword: 'Mahendra@123' }
+            ];
+    
+            // Check if entered credentials match any of the valid combinations
+            for (var i = 0; i < validCredentials.length; i++) {
+                if (
+                    rollNumber === validCredentials[i].rollNumber &&
+                    verifierPassword === validCredentials[i].verifierPassword &&
+                    personalPassword === validCredentials[i].personalPassword
+                ) {
+                    return true;
+                }
+            }
+    
+            return false;
+        }
+    
+        // Function to handle "Forgot Password" link
+        document.querySelector('.forgotpsd a').addEventListener('click', function (event) {
+            event.preventDefault();
+    
+            // Simulate password recovery logic 
+            var rollNumber = prompt('Enter your Roll Number to initiate password recovery:');
+            if (rollNumber) {
+                var newPassword = generateRandomPassword();
+                alert('A new password has been sent to your registered email address.');
+                // Send the new password to the user's email.
+                // In this  just update the stored password.
+                updateStoredPassword(rollNumber, newPassword);
+            }
+        });
+    
+        // Function to generate a random password
+        function generateRandomPassword() {
+            //  Random password generation logic
+            return Math.random().toString(36).slice(-8);
+        }
+    
+        // Function to update stored password 
+        function updateStoredPassword(rollNumber, newPassword) {
+            //  Logic to update the password in your database
+            alert('Password updated in the database.');
+        }
+    
+        // Function to handle "Register Here" link
+        document.querySelector('.register a').addEventListener('click', function (event) {
+            event.preventDefault();
+    
+            // Prompt to get user input for registration
+            var newRollNumber = prompt('Enter your new Roll Number:');
+            var newVerifierPassword = prompt('Enter your new Verifier Password:');
+            var newPersonalPassword = prompt('Enter your new Personal Password:');
+    
+            // Validate the inputs More Validation can be added
+            if (newRollNumber && newVerifierPassword && newPersonalPassword) {
+                // Create a new entry for registration
+                var newEntry = {
+                    rollNumber: newRollNumber,
+                    verifierPassword: newVerifierPassword,
+                    personalPassword: newPersonalPassword
+                };
+    
+                // Add the new entry to the valid credentials 
+                validCredentials.push(newEntry);
+    
+                alert('Registration successful! You can now use your new credentials to log in.');
+            } else {
+                alert('Registration canceled. Please fill in all the required fields.');
+            }
+        });
+    </script>
+    
 
 
         </div>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(circle, rgb(36, 167, 227), rgb(17, 231, 234), rgb(73, 85, 179));}
+
+.notification-container {
+    max-width: 600px;
+    margin: 5rem auto;
+    padding: 4rem;
+    background-color: #b6e5f9;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.1);
+}
+
+.notification {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e6f7ff;
+    border: 1px solid #18191a;
+    border-radius: 5px;
+}
+
+.notification h3 {
+    margin-top: 0;
+}
+
+.notification p {
+    margin-bottom: 0;
+}
+
+.notification a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+   </style>
+    <title>Student Portal Notifications</title>
+</head>
+<body>
+<h1 style="text-align: center; font-style: italic;font-weight: 800; font-size: 3rem; margin-top: 1rem;color: rgb(70, 71, 71);">IMPORTANT NOTIFICATIONS</h1>
+<div class="notification-container" id="notificationContainer"></div>
+
+<script >
+    document.addEventListener("DOMContentLoaded", function () {
+    const notificationContainer = document.getElementById("notificationContainer");
+
+    // Sample notifications (replace with your actual data)
+    const notifications = [
+        {
+            type: "Upcoming Recruitment Drives",
+            company: "ABC Corporation",
+            date: "2024-03-15",
+        },
+        {
+            type: "Workshops and Training Sessions",
+            topic: "Web Development",
+            date: "2024-04-05",
+        },
+        
+        {
+            type: "Internship Opportunities",
+            company: "XYZ Tech",
+        },
+        // Add more notifications as needed
+    ];
+
+    // Display notifications
+    notifications.forEach(notification => {
+        const notificationDiv = document.createElement("div");
+        notificationDiv.classList.add("notification");
+
+        if (notification.type === "Upcoming Recruitment Drives") {
+            notificationDiv.innerHTML = `
+                <h3>${notification.type}</h3>
+                <p>Get ready for the upcoming recruitment drive by ${notification.company} on ${notification.date}. <a href="https://react-form-ruby-eta.vercel.app">Register now!</a></p>
+            `;
+        } else if (notification.type === "Workshops and Training Sessions") {
+            notificationDiv.innerHTML = `
+                <h3>${notification.type}</h3>
+                <p>Enhance your skills with our exclusive workshop on ${notification.topic} this ${notification.date}. <a href="https://www.geeksforgeeks.org/live-learning-corner-free-workshops-for-geeks/">Register now!</a></p>
+            `;
+        } else if (notification.type === "Internship Opportunities") {
+            notificationDiv.innerHTML = `
+                <h3>${notification.type}</h3>
+                <p>Exciting internship opportunities available! Explore and apply for positions with ${notification.company}. <a href="https://internshala.com/">Learn more</a></p>
+            `;
+        }
+        // Add more conditions based on notification types
+
+        notificationContainer.appendChild(notificationDiv);
+    });
+});
+
+</script>
+</body>
+</html>

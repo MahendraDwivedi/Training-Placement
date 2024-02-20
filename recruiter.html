@@ -35,7 +35,7 @@
     <form action="">
          <!-- Headings for the form -->
         <div class="headingsContainer">
-            <button><i style="color:white;" class="fa-brands fa-linkedin-in"></i> &nbsp;<a href="https://in.linkdin.com">Sign in with LinkedIn</a></button>
+            <button><i style="color:white;" class="fa-brands fa-linkedin-in"></i> &nbsp;<a href="https://www.linkedin.com/feed/">Sign in with LinkedIn</a></button>
             <p>OR</p>
         </div>
 
@@ -78,13 +78,99 @@
 
         </div>
     </div>
-  <script>
-         
-     document.getElementById('logn').addEventListener('click',function(){
-        window.location.href = 'portal.html';
-     });
+  
+<script>
+    document.getElementById('logn').addEventListener('click', function (event) {
+        // Prevent the form from submitting and page reload
+        event.preventDefault();
 
-  </script>
+        // Get the values from the form fields
+        var email = document.getElementsByName('Email')[0].value;
+        var password = document.getElementsByName('pswrd')[0].value;
+
+        // Validation logic here 
+        if (validateCredentials(email, password)) {
+            // Redirect to portal.html if validation is successful
+            window.location.href = 'portal.html';
+        } else {
+            // Display an error message or handle invalid credentials
+            alert('Invalid email or password. Please try again.');
+        }
+    });
+
+    // Function to validate email and password
+    function validateCredentials(email, password) {
+        // Hardcoded values for demonstration purposes
+        var validCredentials = [
+            { email: 'rishuayush439@gmail.com', password: 'Ayush@123' },
+            { email: 'dwivedimahendra9999@gmail.com', password: 'Mahendra@123' }
+        ];
+
+        // Check if entered credentials match any of the valid combinations
+        for (var i = 0; i < validCredentials.length; i++) {
+            if (email === validCredentials[i].email && password === validCredentials[i].password) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // Function to handle "Forgot Password" link
+    document.querySelector('.forgotpsd a').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        //  Password recovery logic 
+        var recoveryEmail = prompt('Enter your email to initiate password recovery:');
+
+        // Check if the entered email is valid
+        var validEmail = false;
+        for (var i = 0; i < validCredentials.length; i++) {
+            if (recoveryEmail === validCredentials[i].email) {
+                validEmail = true;
+                break;
+            }
+        }
+
+        if (validEmail) {
+            var newPassword = generateRandomPassword();
+            alert('A new password has been sent to your registered email address.');
+            // Send the new password to the user's email.
+            // Just update the stored password.
+            updateStoredPassword(recoveryEmail, newPassword);
+        } else {
+            alert('Invalid email. Password recovery failed.');
+        }
+    });
+
+    // Function to generate a random password 
+    function generateRandomPassword() {
+        //  Secure random password generation logic
+        return Math.random().toString(36).slice(-8);
+    }
+
+    // Function to update stored password 
+    function updateStoredPassword(email, newPassword) {
+        //  Update the password in your database
+        alert('Password updated in the database.');
+    }
+
+    // Function to handle "Register Here" link
+    document.querySelector('.register a').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Prompt to get user input for registration
+        var newEmail = prompt('Enter your new email:');
+        var newPassword = prompt('Enter your new password:');
+
+        // Add the new registration entry
+        validCredentials.push({ email: newEmail, password: newPassword });
+
+        alert('Registration successful. You can now log in with your new credentials.');
+    });
+</script>
+
+
     
 </body>
 </html>

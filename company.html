@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies</title>
+
+
+    <!-- footer -->
+    <link rel="stylesheet" href="main.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(to right,rgb(239, 141, 35),rgb(246, 216, 156));
+        }
+
+        h1 {
+            color: #151515;
+            margin-top: 20px;
+            font-size:xx-large;
+            font-weight: 700;
+        }
+
+        #companyList {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin-top: 20px;
+            animation: scroll 20s linear infinite;
+        }
+
+        .companyItem {
+            margin: 10px;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .companyLogo {
+            max-width: 100px;
+            min-height: 100px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .detailsButton {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .detailsButton:hover {
+            background-color: #45a049;
+        }
+
+        #companyDetailsOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #companyDetails {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        #companyDetails h2 {
+            color: #333;
+        }
+
+        #companyDetails p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        #closeDetailsButton {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #closeDetailsButton:hover {
+            background-color: #45a049;
+        }
+
+        
+
+/* ***********************************footer******************************* */
+
+footer{
+    width: 100%;
+    height: 300px;;
+    display: flex;
+    margin-top: 9rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right,rgb(239, 141, 35),rgb(246, 216, 156));
+}
+
+footer p:nth-child(1){
+    font-size:30px;
+    color: rgb(255, 255, 254);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p:nth-child(2){
+    font-size:17px;
+    color: rgb(244, 243, 242);
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.social{
+    display: flex;
+}
+.social a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(246, 246, 247);
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: rgb(254, 151, 6);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social a:hover{
+    transform: scale(1.3);
+    transition: .3s;
+    background: aliceblue;
+    color: rgb(253, 253, 253);
+}
+.last{
+         /*what it is doing*/
+    color: rgb(253, 253, 255);
+    bottom: 35px;
+    font-size: 15px;
+    text-align: center;
+}
+ 
+
+        /* Animation for dynamic scrolling */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc( 100vw));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Top Recruiters for Placement</h1>
+
+    <ul id="companyList">
+        <!-- List of tech companies will be dynamically added here using JavaScript -->
+    </ul>
+
+    <div id="companyDetailsOverlay">
+        <div id="companyDetails">
+            <h2 id="companyDetailsName"></h2>
+            <p id="companyDetailsDescription"></p>
+            <button id="closeDetailsButton" onclick="closeDetails()">Close</button>
+        </div>
+    </div>
+
+     <!-- footer -->
+    <footer id="contact">
+        <p style="color: #666;font-style: italic; font-family: sans-serif;">Most Frequently Visited Companies  in REC SONBHADRA</p>
+        <p style="color: #666;font-style: italic; font-family: sans-serif;">Explore Our Journey and Connect With US Through Given Handle for Shaping Careers And Innovation:</p>
+        <div class="social">
+            <a href="https://www.linkedin.com/company/recstnpcell/" target="_blank"><i class="fa-brands fa-github"></i></i></a>
+            <a href="https://www.linkedin.com/company/recstnpcell/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/recstnpcell/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p  style="color: #666;font-style: italic; font-family: sans-serif;" class="last" style="font-style: italic;">©CREATED BY <br> Mahendra Dwivedi & Ayush Mishra</p>
+      </footer>
+
+
+    <script>
+        // Sample array of tech companies with logo URLs and details
+        
+var techCompanies = [
+{ name: 'TCS', logo: 'tcs.png', details: 'Tata Consultancy Services Limited is an Indian multinational information technology services and consulting company headquartered in Mumbai. It is a part of the Tata Group and operates in 150 locations across 46 countries. In September 2023, it was reported that TCS had over 616,000 employees worldwide.' },
+{ name: 'Wipro', logo: 'wipro.jpg', details: 'Wipro (stylized in lower case as wipro) is an Indian multinational corporation that provides information technology, consultant and business process services. It is one of the leading Big Tech companies. Wipro capabilities range across cloud computing, computer security, digital transformation, artificial intelligence, robotics, data analytics, and other technology consulting services to customers in 167 countries' },
+{ name: 'Infosys', logo: 'infosys.png', details: 'Established in 1981, Infosys is a NYSE listed global consulting and IT services company with more than 322k employees. From a capital of US$250, we have grown to become a US$ 18.55 billion (LTM Q3 FY24 revenues) company with a market capitalization of US$ 76.29 billion.' },
+{ name: 'Cognizant', logo: 'cog.png', details: 'Cognizant is an American multinational information technology services and consulting company. It is headquartered in Teaneck, New Jersey, U.S. Cognizant is part of the NASDAQ-100 and trades under CTSH..' },
+{ name: 'HCL', logo: 'hcl.png', details: 'HCL Technologies Limited, d/b/a HCLTech, is an Indian multinational information technology consulting company headquartered in Noida. The founder of HCLTech is Shiv Nadar. It was spun out in 1991 when HCL entered into the software services business. The company has offices in 52 countries and over 225,944 employees.' },
+{ name: 'Amazon', logo: 'amazon.jpg', details: 'Amazon.com, Inc., doing business as Amazon, is an American multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence.' },
+{ name: 'Taxtron', logo: 'Taxtron.jpg', details: 'Company specialized in the areas of IT Infrastructure Management, Web-Based Solution, Prototype Design & Development, and Production & Manufacturing Support. Taxtron Technologies was established in the year 2013 with the objective of providing solution for Industrial clients in PAN INDIA with Qualified, Experienced and Dedicated Team of Technical Professionals. Our services meet the functional requirements and user specific needs of product developers across domains. Our team has vast experience on various architectures and platforms and ensures power optimized, modular and feature-rich product design.' },
+{ name: 'PlanetSpark', logo: 'planetspark.png', details: 'PlanetSpark is an intermediary technology platform which provides online classes to K8 learners on English Communication, Public Speaking, Grammar, Creative Writing, Debating, Vlogging and other new age skills.' },
+{ name: 'Chegg', logo: 'chegg.png', details: 'Chegg, Inc., is an American education technology company based in Santa Clara, California. It provides homework help, digital and physical textbook rentals, textbooks, online tutoring, and other student services.' },
+{ name: 'PW', logo: 'pw.jpg', details: 'Physics Wallah Private Limited is an Indian multinational educational technology company headquartered in Noida, Uttar Pradesh. It was founded by Alakh Pandey and Prateek Maheshwari in 2020. It became a unicorn in June 2022 after raising $100 million at a valuation of $1.1 billion.' }
+];
+
+        function refreshCompanies() {
+            var companyListElement = document.getElementById('companyList');
+
+            // Clear the existing list
+            companyListElement.innerHTML = '';
+
+            // Populate the list with tech companies
+            techCompanies.forEach(function(company) {
+                var listItem = document.createElement('li');
+                listItem.className = 'companyItem';
+
+                var companyLogo = document.createElement('img');
+                companyLogo.src = company.logo;
+                companyLogo.alt = company.name + ' Logo';
+                companyLogo.className = 'companyLogo';
+
+                var detailsButton = document.createElement('button');
+                detailsButton.textContent = 'Details';
+                detailsButton.className = 'detailsButton';
+                detailsButton.onclick = function() { showDetails(company); };
+
+                listItem.appendChild(companyLogo);
+                listItem.appendChild(detailsButton);
+                companyListElement.appendChild(listItem);
+            });
+        }
+
+        function showDetails(company) {
+            var companyDetailsNameElement = document.getElementById('companyDetailsName');
+            var companyDetailsDescriptionElement = document.getElementById('companyDetailsDescription');
+
+            companyDetailsNameElement.textContent = company.name;
+            companyDetailsDescriptionElement.textContent = company.details;
+
+            var companyDetailsOverlay = document.getElementById('companyDetailsOverlay');
+            companyDetailsOverlay.style.display = 'flex';
+        }
+
+        function closeDetails() {
+            var companyDetailsOverlay = document.getElementById('companyDetailsOverlay');
+            companyDetailsOverlay.style.display = 'none';
+        }
+
+        // Initial population of the company list
+        refreshCompanies();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        
+
+
+
+
+/* contact us page  */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contact_us_heading{
+    border-bottom: 2px solid black;
+    padding: 0;
+}
+.contact_wrapper{
+    background: linear-gradient(to right,orange,rgb(208, 172, 126));
+    color: #772d2d;
+    
+}
+
+.contact_grid_container{
+ display: grid;
+ grid-template-columns: 2.8fr 1.2fr;
+ grid-gap: 1%;
+}
+
+.contact_grid_item{
+    margin: 2%;
+    }
+
+.basic_contact{
+    margin: 2%;
+    font-size:medium;
+    font-family:  'Klee One', cursive;
+
+}
+.heading_contact
+{
+    font-family:  'Klee One', cursive;
+    font: weight 800;
+    padding: 1%;
+    color: #1B2945;
+    font-size: large;
+}
+
+
+
+.contact_input{
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 3px 2.5px 2px 0px gray ;
+    border: 1px solid rgba(128, 128, 128, 0.137);
+    background-color: rgba(255, 255, 255, 0.945);
+    width: 70%;
+    height: 80%;
+    font-family:  'Klee One', cursive;
+    margin: 0.2%;
+
+}
+.contact_textarea{
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 3px 2.5px 2px 0px gray;
+    border: 1px solid rgba(128, 128, 128, 0.137);
+    background-color: rgba(255, 255, 255, 0.945);
+
+    width: 70%;
+    height: 80%;
+    font-family:  'Klee One', cursive;
+
+}
+.send_contact_btn{
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 20%;
+    height: 30px;
+    background-color:#772d2d;
+    color:white;
+    font-family:  'Klee One', cursive;
+    box-shadow: 2px 2px 4px 0px rgb(169, 204, 250) ;
+    margin: 2%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.MuiSvgIcon-root{
+    height: 30px;
+}
+@media only screen and (max-width: 600px) {
+    .contact_grid_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-gap: 5%; */
+       }
+       .contact_us_input_container{
+           box-sizing: border-box;
+            width: 100%;
+            /* margin-left: 2%; */
+            margin-top: 0;
+            padding:0  10%;
+    }
+    
+  }
+    </style>
+</head>
+<body >
+    <div class="contact_wrapper"id="contact">
+        
+        <div>
+            <h1 class="contact_us_heading" style="padding: 1%;">Contact us</h1>
+        </div>
+        <div class=" contact_grid_container ">
+            <div class="contact_grid_item">
+                <h5 style="margin: 0px; font-family:sans-serif ; font-size: larger;">Rajkiya Engineering College, Churk, Sonbhadra, Uttar Pradesh - 231206.</h5>
+                <div class="basic_contact">
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"></path>
+                        </svg>
+                        <span>Phone: 05444-252002</span>
+                    </span>
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path>
+                        </svg>
+                        <span>Fax: 05444-252002</span>
+                    </span>
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                        </svg>
+                        <span>E-mail: contact@recsonbhadra.ac.in</span>
+                    </span>
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z">
+
+                            </path>
+                        </svg>
+                        <span>College Website: http://recsonbhadra.ac.in</span>
+                    </span>
+                </div>
+                <h5 class="heading_contact" style="margin: 0px; font-family:sans-serif ; font-size: larger; border-bottom: 1px solid black;">For Company Registration related queries:</h5>
+                <div class="basic_contact">
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"></path>
+                        </svg>
+                        <span>Contact Nos.: +91-9415164409, +91-7379070858, +91-9792925104, +91-9540209899, +91-8081641050</span>
+                    </span>
+                </div>
+                <h5 class="heading_contact" style="margin: 0px; font-family:sans-serif ; font-size: larger; border-bottom: 1px solid black;">Dean Academics Office:</h5>
+                <div class="basic_contact">
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z">
+
+                            </path>
+                        </svg>
+                        <span>Contact Nos.: +91-8317025411, +91-9415539025</span>
+                    </span>
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                        </svg>
+                        <span>Email: deanac@recsonbhadra.ac.in</span>
+                    </span>
+                </div>
+                <h5 class="heading_contact" style="margin: 0px; font-family:sans-serif ; font-size: larger; border-bottom: 1px solid black;">Dean Student Welfare Office:</h5>
+                <div class="basic_contact">
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z">
+
+                            </path>
+                        </svg>
+                        <span>Contact Nos.: +91-8953789305, +91-9839557481</span>
+                    </span>
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                           <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"> </path>
+                        </svg>
+                        <span>Email: deansw@recsonbhadra.ac.in</span>
+                    </span>
+                </div>
+                <h5 class="heading_contact" style="margin: 0px; font-family:sans-serif ; font-size: larger; border-bottom: 1px solid black;">Registrar Office:</h5>
+                <div class="basic_contact">
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"></path>
+                        </svg>
+                        <span>Contact Nos.: +91-9415539025</span>
+                    </span>
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                        </svg>
+                        <span>Email: registrar@recsonbhadra.ac.in</span>
+                    </span>
+                </div>
+                <h5 class="heading_contact" style="margin: 0px; font-family:sans-serif ; font-size: larger; border-bottom: 1px solid black;">Director Office:</h5>
+                <div class="basic_contact">
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"></path>
+                        </svg>
+                        <span>Contact Nos.: 05444-252003, +91-7618907441, +91-7839454220</span>
+                    </span>
+                    <span style="display: flex;">
+                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                        </svg>
+                        <span>Email: director@recsonbhadra.ac.in</span>
+                    </span>
+                </div>
+            </div>
+            <div class="contact_us_input_container">
+                <h1 style="font-family:sans-serif;">Write To Us
+                     <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z">
+
+                        </path>
+                    </svg>
+                </h1>
+                <form style="display: flex; flex-direction: column;">
+                    <label style="display: flex; flex-direction: column;">
+                        Name:
+                        <input class="contact_input" type="text">
+                    </label>
+                    <label style="display: flex; flex-direction: column;">
+                        Email:
+                        <input class="contact_input" type="email">
+                    </label>
+                    <label style="display: flex; flex-direction: column;">
+                         Message:
+                         <textarea class="contact_textarea" rows="7"></textarea>
+                    </label>
+                    <div>
+                       <button class="send_contact_btn"> Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>

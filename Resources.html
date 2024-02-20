@@ -11,54 +11,55 @@
         <div class="log">
             <h3 class="side">REC Sonbhadra</h3>
             
-            
             <h1 class="side">One stop portal for students and companies for placement.</h1>
             
             <img src="logo.png" width="250px" height="250px">
             <br>
             <u><h2 class="p1">Instructions</h2></u>
             
-            <p class="p1">Login Using Your Institute Roll Number.</p>
+            <p class="p1">Login Using Your Institute Roll Number and Secret Access Password.</p>
         </div>
     
         <div class="loginmain">
 
-            <h3 class="h1">Login to REC Sonbhadra Placement 
+            <h3 class="h1">Login to REC Sonbhadra Resource 
                 Portal </h3>
 
     <form action="">
          <!-- Headings for the form -->
         <div class="headingsContainer">
             
-            <p>Login in with your Roll Number and password</p>
+            <p>Authenticate for Student Access</p>
         </div>
 
         <!-- Main container for all inputs -->
         <div class="mainContainer">
             <!-- Username -->
-           <label for="username">Roll Number </label>
+           <label for="username">Roll Number</label>
             <!-- Make sure to put "required" for both the input fields -->
             <input type="text" placeholder="Enter Roll Number" name="username" required>
 
             <br><br>
 
             <!-- Password -->
-            <label for="pswrd">Your password</label>
-            <input type="password" placeholder="Enter Password" name="pswrd" required>
+            <label for="pswrd">Password</label>
+            <input type="password" placeholder="Student Password" name="pswrd" required>
+
+           
 
             <!-- sub container for the checkbox and forgot password link -->
             <div class="subcontainer">
                 <label>
-                  <input type="checkbox" name="remember"> Remember me
+                  <input type="checkbox" name="remember">Remember me
                 </label>
                 <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
             </div>
 
             <!-- Submit button -->
-             <button type="submit"><a href=".\Student Portal\index.html">Login</a></button>
+             <button type="submit"><a href="https://top-courses-swart.vercel.app/">Login</a></button>
 
             <!-- Sign up link -->
-            <p class="register">Not a member?  <a href="#">Register here!</a></p>
+            <p class="register">Don't have an account?  <a href="#">Register here!</a></p>
         </div>
 
         </div>
@@ -66,7 +67,7 @@
 
 
     </form>
-   
+    
      <script>
         document.querySelector('button[type="submit"]').addEventListener('click', function (event) {
             // Prevent the form from submitting and page reload
@@ -76,10 +77,10 @@
             var rollNumber = document.getElementsByName('username')[0].value;
             var password = document.getElementsByName('pswrd')[0].value;
     
-            //  validation logic Here 
+            // Your validation logic here
             if (validateCredentials(rollNumber, password)) {
-                // Redirect to .\Student Portal\index.html if validation is successful
-                window.location.href = '.\\Student Portal\\index.html';
+                // Redirect to the specified URL if validation is successful
+                window.location.href = 'https://top-courses-swart.vercel.app/';
             } else {
                 // Display an error message or handle invalid credentials
                 alert('Invalid Roll Number or password. Please try again.');
@@ -104,7 +105,7 @@
             return false;
         }
     
-        // Function to handle "Forgot Password" link
+        // Function to handle "Forget Password" link
         document.querySelector('.forgotpsd a').addEventListener('click', function (event) {
             event.preventDefault();
     
@@ -123,25 +124,13 @@
             if (validRollNumber) {
                 var newPassword = generateRandomPassword();
                 alert('A new password has been sent to your registered email address.');
-                // Send the new password to the user's email.
-                //  Here just update the stored password.
+                //  Send the new password to the user's email.
+                //  just update the stored password.
                 updateStoredPassword(recoveryRollNumber, newPassword);
             } else {
                 alert('Invalid Roll Number. Password recovery failed.');
             }
         });
-    
-        // Function to generate a random password 
-        function generateRandomPassword() {
-            //  Secure random password generation logic
-            return Math.random().toString(36).slice(-8);
-        }
-    
-        // Function to update stored password 
-        function updateStoredPassword(rollNumber, newPassword) {
-            //Logic to update the password in your database
-            alert('Password updated in the database.');
-        }
     
         // Function to handle "Register Here" link
         document.querySelector('.register a').addEventListener('click', function (event) {
@@ -156,8 +145,21 @@
     
             alert('Registration successful. You can now log in with your new credentials.');
         });
+    
+        // Function to generate a random password 
+        function generateRandomPassword() {
+            // Replace this with a more secure random password generation logic
+            return Math.random().toString(36).slice(-8);
+        }
+    
+        // Function to update stored password 
+        function updateStoredPassword(rollNumber, newPassword) {
+            // Just update the password in your database
+            alert('Password updated in the database.');
+        }
     </script>
     
+
 
 
         </div>

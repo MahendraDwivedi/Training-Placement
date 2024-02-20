@@ -5,14 +5,16 @@
 } 
 
 body { 
-	font-family: Arial, sans-serif; 
-	background-color: #f4f4f4; 
+	
+	
+	background: linear-gradient(90deg,rgb(222, 120, 19),rgb(246, 216, 156));
 	line-height: 1.6; 
 	color: #333; 
 } 
 
+
 header { 
-	background-color: #c58d16; 
+	background: linear-gradient(to right,rgb(248, 140, 0),rgb(190, 131, 42));
 	color: #fff; 
 	text-align: center; 
 	padding: 1rem 0; 
@@ -22,7 +24,7 @@ nav ul {
 	list-style: none; 
 	display: flex; 
 	justify-content: center; 
-	background-color: #b5d5da; 
+	background: linear-gradient(to right,rgb(238, 138, 7),rgb(246, 216, 156));
 	padding: 0.5rem 0; 
 } 
 
@@ -39,39 +41,6 @@ nav a {
 
 nav a:hover { 
 	color: #ff6600; 
-} 
-
-.search { 
-	text-align: center; 
-	margin-top: 2rem; 
-} 
-
-.search h2 { 
-	font-size: 24px; 
-	margin-bottom: 1rem; 
-} 
-
-.search form { 
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-} 
-
-.search input[type="text"] { 
-	padding: 10px; 
-	margin-right: 10px; 
-	border: 1px solid #ccc; 
-	border-radius: 4px; 
-} 
-
-.search button { 
-	background-color: #ff6600; 
-	color: #fff; 
-	border: none; 
-	padding: 10px 20px; 
-	border-radius: 4px; 
-	cursor: pointer; 
-	transition: background-color 0.3s; 
 } 
 
 .search button:hover { 
@@ -93,7 +62,7 @@ nav a:hover {
 } 
 
 .job-listings li { 
-	background-color: #fff; 
+	background-color: rgb(243, 215, 163); 
 	border: 1px solid #ccc; 
 	padding: 20px; 
 	margin-bottom: 20px; 
@@ -101,18 +70,19 @@ nav a:hover {
 } 
 
 .job-listings h3 { 
-	font-size: 20px; 
+	font-size: 30px; 
 	margin-bottom: 10px; 
 } 
 
 .job-listings p { 
-	font-size: 14px; 
+	font-size: 20px; 
+	font-style: italic;
 	margin-bottom: 10px; 
 } 
 
 .job-listings a { 
 	background-color: #333; 
-	color: #fff; 
+	color: #ffffff; 
 	text-decoration: none; 
 	padding: 10px 20px; 
 	border-radius: 4px; 
@@ -123,6 +93,8 @@ nav a:hover {
 .job-listings a:hover { 
 	background-color: #ff6600; 
 } 
+
+
 
 footer { 
 	text-align: center; 
